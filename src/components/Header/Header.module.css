@@ -1,0 +1,10 @@
+.header {
+    flex: 0 0 10vh;
+    background-color: #C89E5C;
+    border: 3px solid #3D372D;
+}
+
+.header img {
+    height: 10vh;
+    padding: 0 10px;
+}

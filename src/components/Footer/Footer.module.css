@@ -1,0 +1,19 @@
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    background-color: #C89E5C;
+    color: #3D372D;
+    padding: 5px 10px;
+    min-height: 5vh;
+    border: 3px solid #3D372D;
+}
+
+.made span {
+    font-weight: 700;
+}
+.help a{
+    font-weight: 700;
+    color: #3D372D;
+}

@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: #CF8A1D;
+    color: #3D372D;
+    flex: 0 0 10vw;
+    padding: 10px;
+    min-height: 85vh;
+    border-left: 3px solid #3D372D;
+    border-right: 3px solid #3D372D;
+}
+.sidebar a {
+    color: #3D372D;
+    font-weight: 600;
+}
+
+.sidebar__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__item:last-child {
+    margin-top: 20px;
+}
