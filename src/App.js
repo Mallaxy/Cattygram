@@ -12,11 +12,9 @@ const App = () => {
             <div className="container">
                 <div className="main">
                     <Header/>
-                    <div className="center">
-                        <Sidebar/>
-                        <div className="page">
-                            <Profile/>
-                        </div>
+                    <Sidebar/>
+                    <div className="page">
+                        <Profile/>
                     </div>
                     <Footer/>
                 </div>

@@ -14,6 +14,7 @@ const Profile = () => {
                 <div className={classes.person__info}>
                     <h2 className={classes.person__nickname}>Mallax</h2>
                 </div>
+            </div>
                 <div className={classes.wall}>
                     <h2>My posts</h2>
                     <form action="">
@@ -23,7 +24,6 @@ const Profile = () => {
                     <div className={classes.wall__post}>Post 1</div>
                     <div className={classes.wall__post}>Post 2</div>
                 </div>
-            </div>
         </div>
     )
 }
