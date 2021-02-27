@@ -89,8 +89,8 @@ h1, h2, h3, h4, h5, h6 {
         'header header'
         'sidebar page'
         'footer footer';
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 75px 1fr 40px ;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 75px 1fr 40px;
 }
 
 .page {

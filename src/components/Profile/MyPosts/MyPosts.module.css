@@ -1,0 +1,17 @@
+.wall {
+    padding: 20px;
+}
+
+.wall textarea {
+    display: block;
+}
+
+.wall * {
+    margin: 5px 0;
+}
+
+.wallButton {
+    width: 50px;
+    border-radius: 5px;
+    height: 25px;
+}

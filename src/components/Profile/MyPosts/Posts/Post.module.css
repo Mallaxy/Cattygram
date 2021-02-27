@@ -1,0 +1,31 @@
+.avatar {
+    max-height: 75px;
+    max-width: 75px;
+    grid-area: avatar;
+}
+
+.avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text {
+    grid-area: message;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    'avatar message'
+    'avatar like';
+}
+
+.post button {
+    grid-area: like;
+    width: 50px;
+    border-radius: 5px;
+    height: 25px;
+}

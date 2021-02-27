@@ -6,17 +6,61 @@
     min-height: 85vh;
     border-left: 3px solid #3D372D;
     border-right: 3px solid #3D372D;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
 }
+
 .sidebar a {
     color: #3D372D;
     font-weight: 600;
 }
 
-.sidebar__list {
+.sidebarList {
     display: flex;
     flex-direction: column;
 }
 
-.sidebar__item:last-child {
+.sidebarItem:last-child {
     margin-top: 20px;
+}
+
+.sidebarItem {
+    margin-bottom: 5px;
+}
+
+a.activeLink {
+    color: wheat;
+}
+
+.friendsBlock {
+    display: grid;
+    align-self: start;
+    grid-template-rows: 20px 1fr;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.friendsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 75px;
+    gap: 20px 10px;
+}
+
+.friendsTittle {
+    align-self: start;
+    font-weight: 600;
+}
+
+.friendItem {
+    display: grid;
+    grid-template-rows: 75px 20px;
+}
+
+.friendAvatar {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #3D372D;
+    border-radius: 10px;
 }
