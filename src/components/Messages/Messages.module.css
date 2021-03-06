@@ -18,11 +18,17 @@ a.activeDialog {
     max-width: 50px;
 }
 
-.message {
+.messages {
     padding: 0 20px;
 }
 
-.message img {
+.messages img {
     width: 100%;
     height: 100%;
+}
+
+.messages textarea {
+    display: block;
+    border: 3px solid #3D372D;
+    border-radius: 5px;
 }

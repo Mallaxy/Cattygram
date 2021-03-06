@@ -10,6 +10,8 @@
 .person {
     display: grid;
     grid-template: 1fr / 1fr 3fr;
+    padding: 10px;
+
 }
 
 .personAvatar {
@@ -22,6 +24,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border: 3px solid #3D372D;
     border-radius: 10px;
 }
 

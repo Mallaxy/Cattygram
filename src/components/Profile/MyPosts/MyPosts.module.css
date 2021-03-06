@@ -1,16 +1,14 @@
-.wall {
+.main {
     padding: 20px;
 }
 
-.wall textarea {
+.main textarea {
     display: block;
+    border: 3px solid #3D372D;
+    border-radius: 5px;
 }
 
-.wall * {
-    margin: 5px 0;
-}
-
-.wallButton {
+.mainButton {
     width: 50px;
     border-radius: 5px;
     height: 25px;

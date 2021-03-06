@@ -9,10 +9,12 @@ const Post = (props) => {
                     src="https://via.placeholder.com/150/771796"
                     alt=""/>
             </div>
-            <div className={classes.text}>
-                {props.text}
+            <div className={classes.postInfo}>
+                <div className={classes.text}>
+                    {props.text}
+                </div>
+                <button>Like! <span>{props.likeCount}</span></button>
             </div>
-            <button>Like! <span>{props.likeCount}</span></button>
         </div>
     )
 }

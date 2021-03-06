@@ -7,25 +7,27 @@
 .avatar img {
     height: 100%;
     width: 100%;
+    border: 3px solid #3D372D;
     border-radius: 10px;
-}
-
-.text {
-    grid-area: message;
 }
 
 .post {
     display: grid;
+    margin: 10px 0;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: auto auto;
     grid-template-areas:
-    'avatar message'
-    'avatar like';
+    'avatar message';
 }
 
 .post button {
-    grid-area: like;
     width: 50px;
     border-radius: 5px;
     height: 25px;
+    align-self: end;
+}
+
+.postInfo {
+    grid-area: message;
+    display: grid;
+    grid-template-rows: auto auto;
 }
