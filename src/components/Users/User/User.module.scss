@@ -1,0 +1,44 @@
+.wrapper {
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 10px 0;
+
+    .leftContent {
+      display: grid;
+      grid-template-rows: 100px;
+      gap: 5px;
+
+      & img {
+        height: 100%;
+        border-radius: 5px;
+      }
+
+      //button {
+      //  width: 100px;
+      //  padding: 5px;
+      //  border-radius: 5px;
+      //}
+    }
+
+    .rightContent {
+      border: 2px solid #3D372D;
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 10px;
+
+      .info {
+        display: grid;
+
+        .annotation {
+          align-self: center;
+        }
+      }
+
+      .location {
+        align-self: center;
+      }
+    }
+  }
+}

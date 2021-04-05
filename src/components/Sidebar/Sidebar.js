@@ -19,6 +19,9 @@ const Sidebar = () => {
                     <NavLink to="/music" activeClassName={classes.activeLink}>Music</NavLink>
                 </li>
                 <li className={classes.sidebarItem}>
+                    <NavLink to="/users" activeClassName={classes.activeLink}>Find Users</NavLink>
+                </li>
+                <li className={classes.sidebarItem}>
                     <NavLink to="/settings" activeClassName={classes.activeLink}>Settings</NavLink>
                 </li>
             </ul>
@@ -31,15 +34,15 @@ const Sidebar = () => {
                     </div>
                     <div className={classes.friendsItem}>
                         <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Andrew</div>
+                        <div className={classes.friendName}>Max</div>
                     </div>
                     <div className={classes.friendsItem}>
                         <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Andrew</div>
+                        <div className={classes.friendName}>Kolya</div>
                     </div>
                     <div className={classes.friendsItem}>
                         <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Andrew</div>
+                        <div className={classes.friendName}>Roma</div>
                     </div>
                 </div>
             </div>

@@ -6,12 +6,12 @@ const Post = (props) => {
         <div className={classes.post}>
             <div className={classes.avatar}>
                 <img
-                    src="https://via.placeholder.com/150/771796"
+                    src="http://placehold.it/150/a6ef6c"
                     alt=""/>
             </div>
             <div className={classes.postInfo}>
                 <div className={classes.text}>
-                    {props.text}
+                    {props.body}
                 </div>
                 <button>Like! <span>{props.likeCount}</span></button>
             </div>
