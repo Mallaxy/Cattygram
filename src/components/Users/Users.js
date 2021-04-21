@@ -1,21 +1,45 @@
 import React from 'react'
-import classes from './Users.module.css'
+import s from './Users.module.css'
 import User from "./User/User";
+import Preloader from "../common/preloader/Preloader";
+import Pagination from '@material-ui/lab/Pagination'
+import {makeStyles} from "@material-ui/core";
+import {usersAPI} from "../../api/api";
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: '20px',
+        '& > * + *': {
+            marginTop: theme.spacing(2),
+        },
+    },
+}));
 
 
 const Users = (props) => {
-    debugger
+    const classes = useStyles()
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
-    let pages = []
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i)
+
+    const onPageChange = (pageNumber) => {
+        props.setCurrentPage(pageNumber)
+        props.toggleFetching(true)
+        usersAPI.getUsers(pageNumber, props.pageSize).then(data => {
+            props.toggleFetching(false)
+            props.setUsers(data)
+        })
     }
+
     return (
-        <div className={classes.wrapper}>
-            <div>
-                {pages.map(p => <span className={props.currentPage === p && classes.selectedPage}>{p}</span>)}
+        <div className={classes.root}>
+            <div className={s.navigation}>
+                <Pagination count={pagesCount} color="standard"
+                            onChange={(event, page) => onPageChange(page)} size="medium"/>
+                <div className={s.preloader}>
+                    {props.isFetching ? <Preloader/> : null}
+                </div>
             </div>
-            {props.usersData.map(u  => <User user={u} follow={props.follow} key={u.id}/>)}
+            {props.usersData.map(u => <User user={u} follow={props.follow} key={u.id}/>)}
         </div>
     )
 }

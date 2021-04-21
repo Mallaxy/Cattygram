@@ -1,14 +1,14 @@
 import React from 'react'
-import classes from "../Messages.module.css";
+import s from "../Messages.module.css";
 
 const Message = (props) => {
     return (
-        <div className={classes.message}>
-            <div className={classes.avatar}>
+        <div className={s.message}>
+            <div className={s.avatar}>
                 <img src={props.avatar} alt=""/>
             </div>
             <div>
-                <div className={classes.text}>
+                <div className={s.text}>
                     {props.text}
                 </div>
             </div>

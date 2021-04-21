@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from "./ProfileInfo.module.css";
+import s from "./ProfileInfo.module.css";
 import Preloader from "../../common/preloader/Preloader";
 
 const ProfileInfo = (props) => {
@@ -8,18 +8,18 @@ const ProfileInfo = (props) => {
     }
     return (
         <div>
-            <div className={classes.profileHeader}>
-                <img src="http://parksadventure.com/wp-content/uploads/2017/10/header-image-1-2.png" alt="Ups...("/>
+            <div className={s.profileHeader}>
+                <img src="https://content.linkedin.com/content/dam/blog/en-us/corporate/blog/2014/08/Innovation-Light-Bulbs.jpg" alt="Ups...("/>
             </div>
-            <div className={classes.person}>
-                <div className={classes.personAvatar}>
+            <div className={s.person}>
+                <div className={s.personAvatar}>
                     <img
                         src={props.profile.photos.large ? props.profile.photos.large : 'https://i.kym-cdn.com/photos/images/newsfeed/001/974/401/44e.gif'}
                         alt=""/>
                 </div>
-                <section className={classes.infoBlock}>
-                    <section className={classes.personInfo}>
-                        <div className={classes.name}>
+                <section className={s.infoBlock}>
+                    <section className={s.personInfo}>
+                        <div className={s.name}>
                             {props.profile.fullName ? <div>{props.profile.fullName}</div> : null}
                             {props.profile.aboutMe ? <div>{props.profile.aboutMe}</div> : null}
                         </div>
@@ -27,7 +27,7 @@ const ProfileInfo = (props) => {
                         {props.profile.lookingForAJobDescription ?
                             <div>Work: {props.profile.lookingForAJobDescription}</div> : null}
                     </section>
-                    <ul className={classes.contactList}>
+                    <ul className={s.contactList}>
                         {props.profile.contacts.facebook ? <li>Facebook: {props.profile.contacts.facebook}</li> : null}
                         {props.profile.contacts.website ? <li>Website: {props.profile.contacts.website}</li> : null}
                         {props.profile.contacts.vk ? <li>Vk: {props.profile.contacts.vk}</li> : null}

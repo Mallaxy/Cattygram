@@ -1,9 +1,9 @@
 import React from "react";
-import classes from  './Preloader.module.css'
+import s from  './Preloader.module.css'
 
 const Preloader = (props) => {
     return (
-            <div className={classes.ldsRoller}>
+            <div className={s.ldsRoller}>
                 <div></div>
                 <div></div>
                 <div></div>

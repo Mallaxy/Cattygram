@@ -40,7 +40,7 @@ const dialogsReduser = (state = initialState, action) => {
     }
 }
 
-export const addMessageAC = () => ({type: ADD_MESSAGE})
-export const onMessageChangeAC = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, text: text})
+export const addMessage = () => ({type: ADD_MESSAGE})
+export const onMessageChange = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, text: text})
 
 export default dialogsReduser

@@ -1,48 +1,50 @@
 import React from 'react'
-import classes from "./Sidebar.module.css";
+import s from "./Sidebar.module.css";
 import {NavLink} from "react-router-dom";
 
 const Sidebar = () => {
     return (
-        <nav className={classes.sidebar}>
-            <ul className={classes.sidebarList}>
-                <li className={classes.sidebarItem}>
-                    <NavLink to="/profile" activeClassName={classes.activeLink}>Profile</NavLink>
-                </li>
-                <li className={classes.sidebarItem}>
-                    <NavLink to="/messages" activeClassName={classes.activeLink}>Messages</NavLink>
-                </li>
-                <li className={classes.sidebarItem}>
-                    <NavLink to="/news" activeClassName={classes.activeLink}>News</NavLink>
-                </li>
-                <li className={classes.sidebarItem}>
-                    <NavLink to="/music" activeClassName={classes.activeLink}>Music</NavLink>
-                </li>
-                <li className={classes.sidebarItem}>
-                    <NavLink to="/users" activeClassName={classes.activeLink}>Find Users</NavLink>
-                </li>
-                <li className={classes.sidebarItem}>
-                    <NavLink to="/settings" activeClassName={classes.activeLink}>Settings</NavLink>
-                </li>
-            </ul>
-            <div className={classes.friendsBlock}>
-                <div className={classes.friendsTittle}>Friends</div>
-                <div className={classes.friendsList}>
-                    <div className={classes.friendsItem}>
-                        <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Andrew</div>
-                    </div>
-                    <div className={classes.friendsItem}>
-                        <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Max</div>
-                    </div>
-                    <div className={classes.friendsItem}>
-                        <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Kolya</div>
-                    </div>
-                    <div className={classes.friendsItem}>
-                        <img className={classes.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
-                        <div className={classes.friendName}>Roma</div>
+        <nav className={s.sidebar}>
+            <div className={s.sidebarItems}>
+                <ul className={s.sidebarList}>
+                    <li className={s.sidebarItem}>
+                        <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
+                    </li>
+                    <li className={s.sidebarItem}>
+                        <NavLink to="/messages" activeClassName={s.activeLink}>Messages</NavLink>
+                    </li>
+                    <li className={s.sidebarItem}>
+                        <NavLink to="/news" activeClassName={s.activeLink}>News</NavLink>
+                    </li>
+                    <li className={s.sidebarItem}>
+                        <NavLink to="/music" activeClassName={s.activeLink}>Music</NavLink>
+                    </li>
+                    <li className={s.sidebarItem}>
+                        <NavLink to="/users" activeClassName={s.activeLink}>Find Users</NavLink>
+                    </li>
+                    <li className={s.sidebarItem}>
+                        <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
+                    </li>
+                </ul>
+                <div className={s.friendsBlock}>
+                    <div className={s.friendsTittle}>Friends</div>
+                    <div className={s.friendsList}>
+                        <div className={s.friendsItem}>
+                            <img className={s.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
+                            <div className={s.friendName}>Andrew</div>
+                        </div>
+                        <div className={s.friendsItem}>
+                            <img className={s.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
+                            <div className={s.friendName}>Max</div>
+                        </div>
+                        <div className={s.friendsItem}>
+                            <img className={s.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
+                            <div className={s.friendName}>Kolya</div>
+                        </div>
+                        <div className={s.friendsItem}>
+                            <img className={s.friendAvatar} src="https://via.placeholder.com/150/771796" alt=""/>
+                            <div className={s.friendName}>Roma</div>
+                        </div>
                     </div>
                 </div>
             </div>

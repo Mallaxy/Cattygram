@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Messages.module.css'
+import s from './Messages.module.css'
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 
@@ -16,13 +16,13 @@ const Messages = (props) => {
         props.onMessageChange(text)
     }
     return (
-        <div className={classes.main}>
+        <div className={s.main}>
             <h1>Dialogs</h1>
-            <div className={classes.content}>
-                <div className={classes.dialogs}>
+            <div className={s.content}>
+                <div className={s.dialogs}>
                     {dialogsElements}
                 </div>
-                <div className={classes.messages}>
+                <div className={s.messages}>
                     {messagesElements}
                     <div>
                         <textarea ref={newMessageElement}

@@ -1,11 +1,11 @@
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const SET_USER_PROFILE ='SET_USER_PROFILE'
+const SET_USER_PROFILE = 'SET_USER_PROFILE'
 
 let initialState = {
     postsData: [
         {id: 1, body: 'Artem', likeCount: 10},
-        {id: 2, body: 'Kira', likeCount: 15},
+        {id: 2, body: 'Kira', likeCount: 10000},
         {id: 3, body: 'Andrew', likeCount: 20},
         {id: 4, body: 'Max', likeCount: 30},
         {id: 5, body: 'John', likeCount: 50},
@@ -39,8 +39,8 @@ const profileReduser = (state = initialState, action) => {
     }
 }
 
-export const addPostAC = () => ({type: ADD_POST})
-export const updateNewPostTextAC = (text) => ({type: UPDATE_NEW_POST_TEXT, body: text})
+export const addPost = () => ({type: ADD_POST})
+export const updateNewPostText = (text) => ({type: UPDATE_NEW_POST_TEXT, body: text})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 
 export default profileReduser

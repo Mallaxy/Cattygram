@@ -1,11 +1,17 @@
 .main {
     padding: 20px;
 }
+.main * {
+    margin-bottom: 10px;
+}
 
 .main textarea {
     display: block;
     border: 3px solid #3D372D;
     border-radius: 5px;
+    width: 300px;
+    height: 75px;
+    resize: none;
 }
 
 .mainButton {
