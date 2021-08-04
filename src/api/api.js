@@ -17,8 +17,23 @@ export const usersAPI = {
     },
     unfollowUser(userId) {
         return axiosInstance.delete(`follow/${userId}`).then(response => response.data.resultCode)
+    }
+}
+
+export const profileAPI ={
+    getProfile(userId) {
+        return axiosInstance.get(`profile/${userId}`)
     },
+    getStatus(userId) {
+        return axiosInstance.get(`profile/status/${userId}`)
+    },
+    updateStatus(status) {
+        return axiosInstance.put(`profile/status`, {status: status})
+    }
+}
+
+export const authAPI = {
     authUser() {
         return axiosInstance.get(`auth/me`)
-    }
+    },
 }

@@ -1,17 +1,16 @@
 import React, {useEffect} from "react";
-import axios from "axios";
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {setUserProfile} from "../../redux/profileReduser";
+import {getStatus, getUserProfile, updateStatus} from "../../redux/profileReduser";
 import {withRouter} from 'react-router-dom'
+import {compose} from "redux";
 
 const ProfileContainer = (props) => {
     useEffect(() => {
         let userId = props.match.params.userId
-        if (!userId) userId = props.myUser || 2
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
-            props.setUserProfile(response.data)
-        })
+        if (!userId) userId = props.userId || 16154
+        props.getUserProfile(userId)
+        props.getStatus(userId)
     }, [])
 
     return (
@@ -20,10 +19,13 @@ const ProfileContainer = (props) => {
 }
 
 
-let mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
-    myUser: state.auth.userId
+    userId: state.auth.userId,
 })
-let WithRouterContainer = withRouter(ProfileContainer)
 
-export default connect(mapStateToProps, {setUserProfile})(WithRouterContainer)
+export default compose(
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus}),
+    withRouter,
+    // AuthRedirect
+)(ProfileContainer)

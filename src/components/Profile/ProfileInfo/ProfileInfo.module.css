@@ -32,7 +32,6 @@
     grid-template-columns: 1fr 1fr;
     border: 3px solid #3D372D;
     border-radius: 5px;
-    margin: 10px;
     padding: 10px;
 }
 .name {
@@ -50,5 +49,12 @@
     align-self: start;
     font-size: 18px;
     text-transform: uppercase;
+}
+
+.sideBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
 }
 

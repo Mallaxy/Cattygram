@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import s from './Users.module.css'
 import User from "./User/User";
 import Preloader from "../common/preloader/Preloader";
 import Pagination from '@material-ui/lab/Pagination'
 import {makeStyles} from "@material-ui/core";
-import {usersAPI} from "../../api/api";
+import {useDispatch, useSelector} from "react-redux";
+import {follow, getUsers, setCurrentPage} from "../../redux/usersReduser";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,16 +19,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Users = (props) => {
     const classes = useStyles()
-
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
+    const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
 
     const onPageChange = (pageNumber) => {
         props.setCurrentPage(pageNumber)
-        props.toggleFetching(true)
-        usersAPI.getUsers(pageNumber, props.pageSize).then(data => {
-            props.toggleFetching(false)
-            props.setUsers(data)
-        })
+        props.getUsers(pageNumber,props.pageSize)
     }
 
     return (
@@ -45,3 +41,39 @@ const Users = (props) => {
 }
 
 export default Users
+
+// const Users = () => {
+//     const classes = useStyles()
+//     const {usersData, isFetching, pageSize, totalUsersCount, currentPage} = useSelector(state => ({
+//         usersData: state.usersPage.usersData,
+//         isFetching: state.usersPage.isFetching,
+//         pageSize: state.usersPage.pageSize,
+//         totalUsersCount: state.usersPage.totalUsersCount,
+//         currentPage: state.usersPage.currentPage,
+//     }))
+//     const dispatch = useDispatch()
+//
+//     useEffect(() => {
+//         dispatch(getUsers(currentPage, pageSize))
+//     },[])
+//
+//     const pagesCount = Math.ceil(totalUsersCount / pageSize)
+//
+//     const onPageChange = async(pageNumber) => {
+//         await dispatch(setCurrentPage(pageNumber))
+//         await dispatch(getUsers(pageNumber, pageSize))
+//     }
+//
+//     return (
+//         <div className={classes.root}>
+//             <div className={s.navigation}>
+//                 <Pagination count={pagesCount} color="standard"
+//                             onChange={(event, page) => onPageChange(page)} size="medium"/>
+//                 <div className={s.preloader}>
+//                     {isFetching ? <Preloader/> : null}
+//                 </div>
+//             </div>
+//             {usersData.map(u => <User user={u} follow={dispatch(follow(u.id))} key={u.id}/>)}
+//         </div>
+//     )
+// }
